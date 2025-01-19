@@ -27,7 +27,7 @@ Go to [AWS Management Console](https://aws.amazon.com/console/) and log in.
 1. Search for "VPC" in the search bar.
 2. Click on "VPC" under "Networking & Content Delivery".
 
-   ![Preview](Images/1.PNG)
+   ![Preview](images/1.PNG)
 
 ### 3. Create a New VPC
 
@@ -39,8 +39,8 @@ Go to [AWS Management Console](https://aws.amazon.com/console/) and log in.
    - _Tenancy_: Choose "Default.
 3. Click "Create VPC".
 
-   ![](Images/2.png)
-   ![](Images/3.png)
+   ![](images/2.png)
+   ![](images/3.png)
 
 ### 4. Create Subnets
 
@@ -54,7 +54,7 @@ Go to [AWS Management Console](https://aws.amazon.com/console/) and log in.
 4. Click "Create Subnet".
 5. Repeat for additional subnets.
 
-   ![](Images/5.png)
+   ![](images/5.png)
 
 #### Note:
 
@@ -63,7 +63,7 @@ Go to [AWS Management Console](https://aws.amazon.com/console/) and log in.
 - Defaultly subnets are attached to Route Table which is created after creation of custom_VPC as shown in the picture below
 - It means a route table is created after creation of Custom_VPC
 
-  ![](Images/6.png)
+  ![](images/6.png)
 
 ### 5. Create an Internet Gateway
 
@@ -76,8 +76,8 @@ Go to [AWS Management Console](https://aws.amazon.com/console/) and log in.
    - Click "Actions" > "Attach to VPC".
    - Choose your VPC and click "Attach".
 
-   ![](Images/7.png)
-   ![](Images/10.png)
+   ![](images/7.png)
+   ![](images/10.png)
 
 ### 6. Configure Route Tables
 
@@ -90,7 +90,7 @@ Go to [AWS Management Console](https://aws.amazon.com/console/) and log in.
    - _VPC_: Select your VPC.
 4. Click "Create".
 
-   ![](Images/11.png)
+   ![](images/11.png)
 
 #### Priblic Route Table
 
@@ -100,11 +100,11 @@ Go to [AWS Management Console](https://aws.amazon.com/console/) and log in.
    - _Name tag_: PrivateRouteTable
    - _VPC_: Select your VPC.
 4. Click "Create".
-   ![](Images/12.png)
+   ![](images/12.png)
 
 - To check how configuration is setup we can see it resource map.
 
-  ![](Images/13.png)
+  ![](images/13.png)
 
 5. Associate with your public subnet:
 
@@ -112,8 +112,8 @@ Go to [AWS Management Console](https://aws.amazon.com/console/) and log in.
    - Click "Edit subnet associations".
    - Select your public subnet and click "Save".
 
-   ![](Images/15.png)
-   ![](Images/16.png)
+   ![](images/15.png)
+   ![](images/16.png)
 
 6. Select the route table and click "Routes".
 7. Click "Edit routes" and add:
@@ -121,8 +121,8 @@ Go to [AWS Management Console](https://aws.amazon.com/console/) and log in.
    - _Target_: Internet Gateway
 8. Click "Save changes".
 
-   ![](Images/14.png)
-   ![](Images/16.png)
+   ![](images/14.png)
+   ![](images/16.png)
 
 #### Notes:
 
@@ -141,17 +141,17 @@ Go to [AWS Management Console](https://aws.amazon.com/console/) and log in.
    - _Elastic IP_: Allocate new Elastic IP.
 4. Click "Create NAT Gateway".
 
-   ![](Images/17.png)
+   ![](images/17.png)
 
 5. Update the private route table:
 
    - Add a route with destination 0.0.0.0/0 and target the NAT Gateway from drop down as shown in the figure.
 
-   ![](Images/18.png)
+   ![](images/18.png)
 
 - After Configuration
 
-  ![](Images/19.png)
+  ![](images/19.png)
 
 #### Notes:
 
@@ -170,14 +170,14 @@ Go to [AWS Management Console](https://aws.amazon.com/console/) and log in.
 6. Add storage, tags, and configure security groups(Open for SSH , HTTP).
 7. Review and launch the instance.
 
-   ![](Images/22.png)
+   ![](images/22.png)
 
 8. logged in into instance
    `ssh -i /path/to/your-key.pem ec2-user@<EC2-Public-IP>`
 
 ### Testing for inbound access
 
-![](Images/20.png)
+![](images/20.png)
 
 ### Run an website into an Ec2 Instace
 
@@ -202,12 +202,12 @@ Go to [AWS Management Console](https://aws.amazon.com/console/) and log in.
 
 - nginx Webserver will Open
 
-![](Images/24.png)
+![](images/24.png)
 
 - To access the website `http://<public-ip>:80/inance`
 
 
-    ![](Images/24.png)
+    ![](images/24.png)
 
 ## Conclusion
 
