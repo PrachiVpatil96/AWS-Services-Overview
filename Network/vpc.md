@@ -27,7 +27,7 @@ Go to [AWS Management Console](https://aws.amazon.com/console/) and log in.
 1. Search for "VPC" in the search bar.
 2. Click on "VPC" under "Networking & Content Delivery".
 
-   ![Preview](Images/1.png)
+   ![Preview](Images/1.PNG)
 
 ### 3. Create a New VPC
 
